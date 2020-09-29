@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch ,Redirect} from "react-router-dom";
+import Navbar from './components/Navbar';
+import Tab from './components/Tab';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+     
+      <Navbar/>
+      <Switch>
+        <Route exact path="/hi" component={()=><Tab language={'hi'} />}/>  
+        <Route exact path="/en" component={()=><Tab language={'en'}/>} />
+        <Route exact path="/fr" component={()=><Tab language={'fr'}/>} />
+      
+      </Switch>
+      
     </div>
   );
 }
+
+
+
 
 export default App;

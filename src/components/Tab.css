@@ -1,0 +1,24 @@
+.data__body{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    margin-top: 3em;
+    grid-gap: 30px;
+}
+
+.btn{
+    padding:10px;
+}
+
+.btn-outline-secondary{
+    background-color:lightseagreen !important;
+    color:white
+}
+
+
+.input-group.mb-3.search-area{
+
+    padding: 50px;
+    display: flex;
+    justify-content: center; 
+
+}

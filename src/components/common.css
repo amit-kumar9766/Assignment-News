@@ -1,0 +1,45 @@
+.pagination{
+
+    justify-content: center;
+}
+
+
+.card-text{
+    text-align: center;
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+
+    .data__body {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 768px) {
+    .data__body {
+        grid-template-columns: 1fr;
+        /* grid-gap: 20px; */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+
+@media only screen and (max-width: 400px) {
+
+    .btn{
+        border-radius: 0 !important;
+    }
+
+    .input-group-append.button-area {
+        margin-top: .5em;
+    }
+
+}
