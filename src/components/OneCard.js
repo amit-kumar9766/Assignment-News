@@ -15,8 +15,7 @@ const handleClick=()=>{
       let arr=localStorage.getItem('hide')
       
       let hideArray=JSON.parse(arr)||[];
-      console.log(hideArray)
-      console.log('ATPUBLISHED',Id) 
+      
      
       if(hideArray.includes(Id)){
                 console.log('favbefore',hideArray)

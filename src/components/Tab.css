@@ -16,9 +16,13 @@
 
 
 .input-group.mb-3.search-area{
-
+    
     padding: 50px;
     display: flex;
     justify-content: center; 
 
+}
+
+*, ::after, ::before {
+    box-sizing: content-box;
 }

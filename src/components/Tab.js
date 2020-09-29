@@ -25,18 +25,15 @@ const Tab =( {language} ) => {
         fetch(endpoint)
             .then(result => result.json())
             .then(result => {
-                
-                
+               
                 if(result.totalArticles ===0){
                     setNodata(true)
                     return;
-                }
-                
+                }    
                 setData(result.articles);
                 setNodata(false)
                 setLoading(true)
             })
-
             .catch(error => {
                 console.log('Error:', error)
                 setLoading(true)
@@ -68,7 +65,7 @@ const Tab =( {language} ) => {
     if(nodata){
         return <>
         <div className="input-group mb-3 search-area" style={{padding:'40px'}}>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} style={{boxSizing:'content-box'}}>
             <input type="text" class="form-control" placeholder="Please search here " aria-label="Recipient's username" 
              aria-describedby="basic-addon2" onChange={handleChange} value={searchTerm}/>
             </form>
@@ -82,12 +79,12 @@ const Tab =( {language} ) => {
     
       return (
         <>
-       <div className="input-group mb-3 search-area">
+       <div className="input-group mb-3 search-area" >
             <form onSubmit={handleSubmit}>
             <input type="text" className="form-control" placeholder="Please search here " aria-label="Recipient's username" 
              aria-describedby="basic-addon2" onChange={handleChange} value={searchTerm}/>
             </form>
-        <div class="input-group-append button-area">
+        <div class="input-group-append button-area" style={{boxSizing:'content-box'}}>
             <button className="btn btn-outline-secondary" onClick={handleSubmit} type="button">Search</button>
         </div>
         </div>
